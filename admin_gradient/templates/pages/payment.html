@@ -1,0 +1,158 @@
+<div class="row">
+<div class="col-md-6 left" style="float-left">
+  <div class="row d-flex justify-content-left">
+      <div class="card rounded-3">
+        <div class="card-body p-4">
+          <div class="text-center mb-4">
+            <h3>Add Card</h3>
+          </div>
+          <form action="">
+            <p class="fw-bold mb-4 pb-2">Saved cards:</p>
+
+            <div class="d-flex flex-row align-items-center mb-4 pb-1">
+              <img class="img-fluid" src="https://img.icons8.com/color/48/000000/mastercard-logo.png" />
+              <div class="flex-fill mx-3">
+                <div class="form-outline">
+                  <input type="text" id="formControlLgXc" class="form-control form-control-lg"
+                    value="**** **** **** 3193" />
+                  <label class="form-label" for="formControlLgXc">Card Number</label>
+                </div>
+              </div>
+              <a href="#!">Remove card</a>
+            </div>
+
+            <div class="d-flex flex-row align-items-center mb-4 pb-1">
+              <img class="img-fluid" src="https://img.icons8.com/color/48/000000/visa.png" />
+              <div class="flex-fill mx-3">
+                <div class="form-outline">
+                  <input type="text" id="formControlLgXs" class="form-control form-control-lg"
+                    value="**** **** **** 4296" />
+                  <label class="form-label" for="formControlLgXs">Card Number</label>
+                </div>
+              </div>
+              <a href="#!">Remove card</a>
+            </div>
+
+            <p class="fw-bold mb-4">Add new card:</p>
+
+            <div class="form-outline mb-4">
+              <input type="text" id="formControlLgXsd" class="form-control form-control-lg"
+                value="Anna Doe" />
+              <label class="form-label" for="formControlLgXsd">Cardholder's Name</label>
+            </div>
+
+            <div class="row mb-4">
+              <div class="col-7">
+                <div class="form-outline">
+                  <input type="text" id="formControlLgXM" class="form-control form-control-lg"
+                    value="1234 5678 1234 5678" />
+                  <label class="form-label" for="formControlLgXM">Card Number</label>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="form-outline">
+                  <input type="password" id="formControlLgExpk" class="form-control form-control-lg"
+                    placeholder="MM/YYYY" />
+                  <label class="form-label" for="formControlLgExpk">Expire</label>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="form-outline">
+                  <input type="password" id="formControlLgcvv" class="form-control form-control-lg"
+                    placeholder="Cvv" />
+                  <label class="form-label" for="formControlLgcvv">Cvv</label>
+                </div>
+              </div>
+            </div>
+			<a href="{% url 'icon_feather' %}" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Add Card</a>
+          </form>
+        </div>
+      </div>
+  </div>
+  
+ </div>
+
+
+
+<div class="col-md-6 right" style="float-right">
+  <div class="row d-flex justify-content-right">
+      <div class="card rounded-3">
+        <div class="card-body p-4">
+          <div class="text-center mb-4">
+            <div class="py-4 d-flex flex-row">
+              <span class="ps-2">Pay</span>
+            </div>
+            <div class="d-flex pt-2">
+              <div>
+              	<p>
+                 <b>License Fees <span class="text-success">BWP 250.00</span></b>
+                </p>
+                <p>
+                  <b>Tax Responsibility <span class="text-success">BWP 12.50</span></b>
+                </p>
+              </div>
+              <div class="ms-auto">
+                <p class="text-primary">
+                  <i class="fas fa-plus-circle text-primary pe-1"></i>Add insurance card
+                </p>
+              </div>
+            </div>
+            <p>
+              Insurance claims and all necessary dependencies will be submitted to your
+              insurer for the coverred portion of this order
+            </p>
+            <div class="rounded d-flex" style="background-color: #f8f9fa;">
+              <div class="p-2">Aetna-Open Access</div>
+              <div class="ms-auto p-2">OAP</div>
+            </div>
+            <hr />
+            <div class="pt-2">
+              <div class="d-flex pb-2">
+                <div>
+                  <p>
+                    <b>Patient Balance <span class="text-success">$13.24</span></b>
+                  </p>
+                </div>
+                <div class="ms-auto">
+                  <p class="text-primary">
+                    <i class="fas fa-plus-circle text-primary pe-1"></i>Add payment card
+                  </p>
+                </div>
+              </div>
+              <form class="pb-3">
+                <div class="d-flex flex-row pb-3">
+                  <div class="d-flex align-items-right pe-2">
+                    <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1"
+                      value="" aria-label="..." checked />
+                  </div>
+                  <div class="rounded border d-flex w-100 p-3 align-items-right">
+                    <p class="mb-0">
+                      <i class="fab fa-cc-visa fa-lg text-primary pe-2"></i>Visa Debit
+                      Card
+                    </p>
+                    <div class="ms-auto">************3456</div>
+                  </div>
+                </div>
+
+                <div class="d-flex flex-row">
+                  <div class="d-flex align-items-center pe-2">
+                    <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel2"
+                      value="" aria-label="..." />
+                  </div>
+                  <div class="rounded border d-flex w-100 p-3 align-items-right">
+                    <p class="mb-0">
+                      <i class="fab fa-cc-mastercard fa-lg text-dark pe-2"></i>Mastercard
+                      Office
+                    </p>
+                    <div class="ms-auto">************1038</div>
+                  </div>
+                </div>
+              </form>
+              <a href="{% url 'icon_feather' %}" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Payment</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+  </div>
+</div>

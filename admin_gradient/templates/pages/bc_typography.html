@@ -1,0 +1,75 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- [ Main Content ] start -->
+		<!-- [ breadcrumb ] start -->
+		<div class="page-header">
+			<div class="page-block">
+				<div class="row align-items-center">
+					<div class="col-md-12">
+						<div class="page-header-title">
+							<h5 class="m-b-10">Registration</h5>
+						</div>
+						<ul class="breadcrumb">
+							<li class="breadcrumb-item"><a href="{% url 'index' %}"><i class="feather icon-home"></i></a></li>
+							<li class="breadcrumb-item"><a href="#">Company Registration Details</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- [ breadcrumb ] end -->
+		<!-- [ Main Content ] start -->
+		<div class="row">
+			{% if reg == '1' %}
+			<!-- [ Typography ] start -->
+			<div class="col-sm-12">
+				<div class="card">
+					<div class="card-header">
+						<h5>Company Details</h5>
+					</div>
+					<div class="card-body">
+						{% include 'pages/forms.html' %}
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<div class="card">
+					<div class="card-header">
+						<h5>Company Profile</h5>
+					</div>
+					<div class="card-body">
+						{% include 'pages/business_profile_form.html' %}
+					</div>
+				</div>
+			</div>
+			{% elif reg == '2' %}
+			<div class="col-sm-12">
+				<div class="card">
+					<div class="card-header">
+						<h5>Company Business Profile</h5>
+					</div>
+					<div class="card-body">
+						{% include 'pages/business_profile.html' %}
+					</div>
+				</div>
+			</div>
+			{% else %}
+			<div class="col-sm-12">
+				<div class="card">
+					<div class="card-header">
+						<h5>Company Details</h5>
+					</div>
+					<div class="card-body">
+						{% include 'pages/business_profile_new.html' %}
+					</div>
+				</div>
+			</div>
+			{% endif%}
+			
+		</div>
+		<!-- [ Main Content ] end -->
+<!-- [ Main Content ] end -->
+{% endblock content %}
+

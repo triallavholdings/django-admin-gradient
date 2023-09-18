@@ -1,0 +1,49 @@
+<form>
+
+  <!-- Message input -->
+  <div class="form-outline mb-4">
+    <textarea class="form-control" id="form6Example7" rows="4"></textarea>
+    <label class="form-label" for="form6Example7">Executive Summary</label>
+  </div>
+ 
+ <!-- Message input -->
+  <div class="form-outline mb-4">
+    <textarea class="form-control" id="form6Example7" rows="4"></textarea>
+    <label class="form-label" for="form6Example7">Company overview</label>
+  </div>
+ 
+  <select class="select" multiple>
+    <option value="1">Diamond Cutting</option>
+    <option value="2">Rough Diamond Export</option>
+    <option value="3">Rough Diamond Import</option>
+    <option value="4">Four</option>
+    <option value="5">Five</option>
+  </select>
+  <label class="form-label select-label">Services</label>
+
+  <!-- Message input -->
+  <div class="form-outline mb-4">
+    <textarea class="form-control" id="form6Example7" rows="4"></textarea>
+    <label class="form-label" for="form6Example7">Additional information</label>
+  </div>
+
+  <!-- 2 column grid layout with text inputs for the first and last names -->
+  <div class="row mb-4">
+    <div class="col">
+      <div class="form-outline">
+        <label class="form-label" for="customFile">Business Profile (PDF format)</label>
+  		<input type="file" class="form-control" id="customFile" />
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="form-outline">
+  		<label for="formFileMultiple" class="form-label">Other Documents (Allows Multiple files input)</label>
+		<input class="form-control" type="file" id="formFileMultiple" multiple />
+      </div>
+    </div>
+  </div>
+
+  <!-- Submit button -->
+  <a href="{% url 'bc_typography' %}?reg=2" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Save</a>
+</form>
