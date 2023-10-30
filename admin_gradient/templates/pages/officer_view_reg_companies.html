@@ -1,0 +1,48 @@
+{% load static %}
+<!-- [ Hover-table ] start -->
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-body table-border-style">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Conpany Name</th>
+                                <th>Company Reg Number</th>
+                                <th>Email</th>
+                                <th>Address</th>
+                                <th>Director</th>
+                                <th>Company Profile</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Triallav Holdings</td>
+                                <td>BW00004666801</td>
+                                <td>triallav@gmail.com</td>
+                                <td>P. O. Box 1112, Gaborone</td>
+                                <td>T. Monthe</td>
+                                <td>
+                                	<a href="{% url 'bc_typography' %}?reg=2" class="btn btn-primary btn-lg-sm" tabindex="-1" role="button" aria-disabled="true">View Company Profile</a>
+                                </td>
+                            	</tr>
+                            <tr>
+                            	<td>2</td>
+                                <td>Test Holdings</td>
+                                <td>BW00003445298</td>
+                                <td>test@gmail.com</td>
+                                <td>Private Bag 004,Gabs</td>
+                                <td>Test Director</td>
+                                <td>
+                                	<a href="{% url 'bc_typography' %}?reg=2" class="btn btn-primary btn-lg-sm" tabindex="-1" role="button" aria-disabled="true">View Company Profile</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ Hover-table ] end -->

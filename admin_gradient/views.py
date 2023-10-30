@@ -48,7 +48,7 @@ def user_logout_view(request):
   logout(request)
   return redirect('/accounts/auth-signin/')
 
-
+    
 # Dashboard
 def index(request):
     return render(request, 'pages/index.html')
@@ -58,20 +58,25 @@ def index(request):
 def bc_typography(request):
     context = {
         "reg": request.GET.get('reg', ''),
+        'officer': request.user.groups.filter(name='officer').exists()
     }
     return render(request, 'pages/bc_typography.html', context)
 
 @login_required(login_url='/accounts/auth-signin')
 def icon_feather(request):
     context = {
-        "cert": request.GET.get('cert', ''),
+        'cert': request.GET.get('cert', ''),
+        'officer': request.user.groups.filter(name='officer').exists()
     }
     return render(request, 'pages/icon-feather.html', context)
 
 # Table
 @login_required(login_url='/accounts/auth-signin')
 def tbl_bootstrap(request):
-    return render(request, 'pages/tbl_bootstrap.html')
+    context = {
+        'officer': request.user.groups.filter(name='officer').exists()
+    }
+    return render(request, 'pages/tbl_bootstrap.html', context)
 
 # Chart & Maps
 @login_required(login_url='/accounts/auth-signin')

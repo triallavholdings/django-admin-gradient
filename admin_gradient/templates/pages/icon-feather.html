@@ -24,6 +24,10 @@
 <!-- [ breadcrumb ] end -->
 <div class="row">
     <!-- [ feather-icon ] start -->
+    {% if officer %} 
+	    
+	{% else %}
+	
     <div class="col-sm-12">
 		<div class="card">
 			<div class="card-header">
@@ -36,7 +40,7 @@
 			</div>
 		</div>
 	</div>
-
+	{% endif %}
 	{% if cert == '1' %}
 	<!-- [ Typography ] start -->
 	<div class="col-sm-12">
@@ -71,6 +75,16 @@
 			</div>
 		</div>
 	</div>
+	<div class="col-sm-12">
+		<div class="card">
+			<div class="card-header">
+				<h5>Payment Details</h5>
+			</div>
+			<div class="card-body">
+				{% include 'pages/payment.html' %}
+			</div>
+		</div>
+	</div>
 	{% elif cert == '3' %}
 	<!-- [ Typography ] start -->
 	<div class="col-sm-12">
@@ -80,6 +94,16 @@
 			</div>
 			<div class="card-body">
 				{% include 'pages/cutting_license.html' %}
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12">
+		<div class="card">
+			<div class="card-header">
+				<h5>Payment Details</h5>
+			</div>
+			<div class="card-body">
+				{% include 'pages/payment.html' %}
 			</div>
 		</div>
 	</div>
@@ -105,6 +129,14 @@
 			</div>
 		</div>
 	</div>
+	{% elif officer %} 
+	    {% include 'pages/kimberly_cert_apps.html' %}
+	    <hr>
+	    <br>
+	    {% include 'pages/dealer_license_apps.html' %}
+	    <hr>
+	    <br>
+	    {% include 'pages/diamond_cutting_license_apps.html' %}
 	{% else %}
 		{% include 'pages/certificates_listboard.html' %}
 	{% endif %}

@@ -1,0 +1,130 @@
+{% load static %}
+<!-- [ Hover-table ] start -->
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-header">
+                <h5>Exportation</h5>
+                <span class="d-block m-t-5">Rough Diamonds tacking & tracing</span>
+                
+                
+                <!-- Button trigger modal -->
+				<button type="button" class="btn btn-primary  btn-lg-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+				  Add Diamond
+				</button>
+				
+				<!-- Modal -->
+				<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				  <div class="modal-dialog">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <h1 class="modal-title fs-5" id="exampleModalLabel">Add, Track & Trace Export Diamond</h1>
+				        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				      </div>
+				      <div class="modal-body">
+				        {% include 'pages/diamond_export.html' %}
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				        <button type="button" class="btn btn-primary">Save changes</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+            </div>
+            <div class="card-body table-border-style">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Tracking Number</th>
+                                <th>Discovery Date</th>
+                                <th>Size</th>
+                                <th>Value</th>
+                                <th>Export status</th>
+                                <th>Price</th>
+                                <th>Permit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>DE12323</td>
+                                <td>18/09/2023</td>
+                                <td>23 cubic cent</td>
+                                <td>BWP 190,000.00</td>
+                                <td>pending</td>
+                                <td>BWP 180,000.00</td>
+                                <td>
+                                
+                                <!-- Button trigger modal -->
+									<button type="button" class="btn btn-primary  btn-lg-sm" data-bs-toggle="modal" data-bs-target="#permapplyModal">
+									  Permit Application
+									</button>
+									
+									<!-- Modal -->
+									<div class="modal fade" id="permapplyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+									  <div class="modal-dialog">
+									    <div class="modal-content">
+									      <div class="modal-header">
+									        <h1 class="modal-title fs-5" id="exampleModalLabel">Diamond Permit Application</h1>
+									        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									      </div>
+									      <div class="modal-body">
+									        {% include 'pages/diamond_permit.html' %}
+									      </div>
+									      <div class="modal-footer">
+									        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+									        <button type="button" class="btn btn-primary">Save changes</button>
+									      </div>
+									    </div>
+									  </div>
+									</div>
+                                
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>DE12999</td>
+                                <td>18/09/2023</td>
+                                <td>12 cubic cent</td>
+                                <td>BWP 120,000.00</td>
+                                <td>pending</td>
+                                <td>BWP 130,000.00</td>
+                                <td>
+                                
+                                <!-- Button trigger modal -->
+									<button type="button" class="btn btn-primary  btn-lg-sm" data-bs-toggle="modal" data-bs-target="#pviewModal">
+									  View Permit
+									</button>
+									
+									<!-- Modal -->
+									<div class="modal fade" id="pviewModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+									  <div class="modal-dialog">
+									    <div class="modal-content">
+									      <div class="modal-header">
+									        <h1 class="modal-title fs-5" id="exampleModalLabel">Diamond Permit Application</h1>
+									        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									      </div>
+									      <div class="modal-body">
+									        <embed src="{% static 'assets/documents/Triallav.pdf' %}"
+						                               frameborder="0" width="100%" height="400px">
+									      </div>
+									      <div class="modal-footer">
+									        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+									        <button type="button" class="btn btn-primary">Save changes</button>
+									      </div>
+									    </div>
+									  </div>
+									</div>
+                                
+								</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ Hover-table ] end -->
